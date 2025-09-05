@@ -4,12 +4,16 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;
+    gap: 16px;    
 }
 
 .grid-conteiner {
-    display: grid;    
-    grid-template-columns: 1fr; 
+    display: grid;
+    /* adaptando blocos para que fiquem em colunas Mobile First    
+    grid-template-columns: repeat(5, 1fr); */
+
+    grid-template-columns: 1fr;
+
     grid-gap: 10px;
     margin-top: 20px;
 }
@@ -31,3 +35,15 @@
 .azul {background-color: rgb(115, 115, 236);}
 .amarela {background-color: rgb(241, 241, 94);}
 .roxa {background-color: rgb(202, 94, 202);}
+
+
+@media (min-widht: 1024px){
+    .conteudo {
+        width: 50%;
+    }
+
+    .grid-conteiner {
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+}
