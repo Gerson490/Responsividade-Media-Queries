@@ -4,25 +4,21 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;    
+    gap: 16px;
 }
 
 .grid-conteiner {
     display: grid;
-    /* adaptando blocos para que fiquem em colunas Mobile First    
-    grid-template-columns: repeat(5, 1fr); */
-
     grid-template-columns: 1fr;
-
     grid-gap: 10px;
     margin-top: 20px;
 }
 
 .grid-item {
-    height: 100px;
+    height: 85px;
     /* cuidado com tamanho fixo somente em alguns casos 
     width: 250px; */
-    width: 100%; 
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,14 +32,23 @@
 .amarela {background-color: rgb(241, 241, 94);}
 .roxa {background-color: rgb(202, 94, 202);}
 
+/*BreakPoints*/
 
-@media (min-widht: 1024px){
+/*tablet*/
+@media (min-width: 768px){
+    .conteudo {
+        width: 70%;
+    }
+    .grid-conteiner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*desk*/
+@media (min-width: 1024px){
     .conteudo {
         width: 50%;
     }
-
     .grid-conteiner {
         grid-template-columns: repeat(5, 1fr);
-
     }
 }
